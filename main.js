@@ -99,7 +99,7 @@ ScrollReveal({
 
   /* Testimonials carousel slider swiper */
   const swiper = new Swiper('.swiper', {
-    slidesPerView: 2,
+    slidesPerView: 1,
     pagination:{
       el: '.swiper-pagination'
     },
