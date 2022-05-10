@@ -7,6 +7,7 @@ function onScroll() {
 
   activateMenuAtCurrentSection(home)
   activateMenuAtCurrentSection(services)
+  activateMenuAtCurrentSection(testimonials)
   activateMenuAtCurrentSection(about)
   activateMenuAtCurrentSection(contact)
 }
@@ -27,11 +28,7 @@ function activateMenuAtCurrentSection(section) {
   //o topo da seção chegou ou ultrapassou a linha alvo
   const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
 
-  //informações dos dados e da lógica
-  console.log(
-    'O topo da seção chegou ou passou da linha alvo?',
-    sectionTopReachOrPassedTargetLine
-  )
+  
 
   //verificar se a base está abaixo da linha alvo
   //quais dados vou precisar?
@@ -42,10 +39,7 @@ function activateMenuAtCurrentSection(section) {
   // o final da seção passou da linha alvo??
   const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
 
-  console.log(
-    'O fundo da seção passou da linha alvo?',
-    sectionEndPassedTargetLine
-  )
+  
 
   //limites da seção
   const sectionBoundaries =
@@ -94,7 +88,22 @@ ScrollReveal({
   #home .stats, 
   #services,
   #services header,
-  #services .card
+  #services .card,
+  #testimonials,
+  #testimonials header,
+  #testimonials .testimonial,
   #about, 
   #about header, 
-  #about .content`)
+  #about .content,
+  #contact`)
+
+  /* Testimonials carousel slider swiper */
+  const swiper = new Swiper('.swiper', {
+    slidesPerView: 2,
+    pagination:{
+      el: '.swiper-pagination'
+    },
+    mousewheel: true,
+    keyboard: true
+
+  });

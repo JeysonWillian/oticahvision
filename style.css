@@ -379,6 +379,61 @@ body.menu-expanded button path {
   margin-block: 1.6rem;
 }
 
+/*=========== TESTIMONIALS =====================*/
+#testimonials {
+  background: white;
+}
+
+#testimonials h2 {
+  margin-bottom: 6rem;
+}
+
+#testimonials blockquote {
+  padding: 3.2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.6 rem;
+
+  background: var(--brand-beige);
+  text-align: left;
+  margin-bottom: 3.2rem;
+}
+#testimonials blockquote p {
+  margin-top: 2rem;
+}
+
+#testimonials cite {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--primary-color);
+  font-weight: 700;
+  
+}
+
+#testimonials cite img {
+  width: 4.2rem;
+  height: 4.2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 1.6rem;
+}
+
+/*swiper*/
+.swiper-slide{
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet{
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active{
+  background: var(--primary-color);
+}
+
 /*=========== ABOUT =====================*/
 #about {
   text-align: left;
@@ -686,7 +741,7 @@ footer .social-links {
 
   /*=========== SERVICES =====================*/
   #services h2 {
-    width: 47rem;
+    width: 49rem;
     margin-inline: auto;
   }
 
@@ -753,4 +808,8 @@ footer .social-links {
     margin-bottom: 0;
     text-align: center;
   }
+
+  
+
+
 }
