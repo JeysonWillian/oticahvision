@@ -318,7 +318,7 @@ body.menu-expanded button path {
   display: block;
   margin-inline: auto;
   width: 42rem;
-  height: 54.7rem;
+  height: 50.7rem;
 
   object-position: 0.2rem;
   border-radius: 0.6rem;
@@ -385,7 +385,9 @@ body.menu-expanded button path {
 }
 
 #testimonials h2 {
-  margin-bottom: 6rem;
+  margin-inline: auto;
+  width: 49rem;
+  margin-bottom: 2rem;
 }
 
 #testimonials blockquote {
@@ -398,17 +400,20 @@ body.menu-expanded button path {
   margin-bottom: 3.2rem;
 }
 #testimonials blockquote p {
-  margin-top: 2rem;
+  /* margin-top: 2rem; */
+  position: relative;
+  text-indent: 4rem;
+  margin-bottom: 2rem;
+  color: var(--paragraph);
 }
 
 #testimonials cite {
   display: flex;
   align-items: center;
-  margin-top: 2rem;
+
   font-style: italic;
   color: var(--primary-color);
   font-weight: 700;
-  
 }
 
 #testimonials cite img {
@@ -420,17 +425,17 @@ body.menu-expanded button path {
 }
 
 /*swiper*/
-.swiper-slide{
+.swiper-slide {
   height: auto;
   padding: 4rem 1rem;
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
   width: 0.75rem;
   height: 0.75rem;
 }
 
-.swiper-pagination-bullet-active{
+.swiper-pagination-bullet-active {
   background: var(--primary-color);
 }
 
@@ -756,6 +761,13 @@ footer .social-links {
     flex-grow: 1;
   }
 
+  /*=========== TESTIMONIALS =====================*/
+
+  #testimonials .wrapper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   /*=========== ABOUT =====================*/
   #about .wrapper {
     grid-template-columns: 56rem 1fr;
@@ -808,8 +820,4 @@ footer .social-links {
     margin-bottom: 0;
     text-align: center;
   }
-
-  
-
-
 }
