@@ -325,7 +325,7 @@ body.menu-expanded button path {
   display: block;
   margin-inline: auto;
   width: 42rem;
-  height: 50.7rem;
+  height: 44.7rem;
 
   object-position: 0.2rem;
   border-radius: 0.6rem;
@@ -755,6 +755,7 @@ footer .social-links {
 
   #home img {
     width: 42rem;
+    height: 54rem;
   }
 
   /*=========== SERVICES =====================*/
