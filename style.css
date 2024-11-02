@@ -13,7 +13,7 @@
 
   --brand-beige: hsla(0, 100%, 98%, 1);
   --brand-light: hsla(0, 100%, 95%, 1);
-  --brand-light-2: hsl(0, 12%, 97%);
+  --brand-light-2: hwb(0 96% 3%);
 
   --brand-dark: hsl(0, 66%, 38%);
 
@@ -35,7 +35,7 @@ body {
 }
 
 body {
-  font-family: 'DM Sans';
+  font-family: "DM Sans";
   font-size: 1.6rem;
   text-align: center;
   overflow: overlay;
@@ -134,12 +134,12 @@ section .content p {
 }
 
 /* CUSTOM COLORS */
-#navigation .logo path[fill*='#00856F'],
+#navigation .logo path[fill*="#00856F"],
 #backToTopButton circle {
   fill: var(--primary-color);
 }
 
-button.open-menu path[stroke*='#00856F'],
+button.open-menu path[stroke*="#00856F"],
 #contact li path {
   stroke: var(--primary-color);
 }
@@ -149,7 +149,7 @@ body.menu-expanded #navigation .logo path,
   fill: white;
 }
 
-#navigation.scroll button.open-menu path[stroke*='#00856F'] {
+#navigation.scroll button.open-menu path[stroke*="#00856F"] {
   stroke: white;
 }
 
@@ -296,7 +296,7 @@ body.menu-expanded button path {
 
 #home::before {
   /*tag html no css*/
-  content: '';
+  content: "";
   width: 100%;
   height: calc(79% + var(--nav-height));
   background-color: var(--brand-light);
@@ -318,7 +318,6 @@ body.menu-expanded button path {
   font-weight: 400;
   color: var(--paragraph);
   margin-bottom: 3.2rem;
-  
 }
 
 #home img {
@@ -663,7 +662,7 @@ footer .social-links {
   }
 
   nav#navigation .menu li a::after {
-    content: '';
+    content: "";
     width: 0%;
     height: 2px;
     background-color: var(--primary-color);
@@ -699,9 +698,8 @@ footer .social-links {
     border: none;
   }
 
-  nav .logo img{
+  nav .logo img {
     width: 25rem;
-    
   }
 
   /*=========== HOME =====================*/
@@ -716,8 +714,8 @@ footer .social-links {
   #home .wrapper {
     grid-template-columns: 60.5rem 1fr;
     grid-template-areas:
-      'A B'
-      'C C';
+      "A B"
+      "C C";
   }
 
   #home .col-a {
@@ -792,7 +790,7 @@ footer .social-links {
   /*=========== ABOUT =====================*/
   #about .wrapper {
     grid-template-columns: 56rem 1fr;
-    grid-template-areas: 'B A';
+    grid-template-areas: "B A";
     gap: 6.7rem;
   }
 
@@ -807,7 +805,7 @@ footer .social-links {
   /*=========== CONTACT =====================*/
   #contact .wrapper {
     grid-template-columns: 1fr 57.5rem;
-    grid-template-areas: 'A B';
+    grid-template-areas: "A B";
   }
 
   #contact h2 {
@@ -821,7 +819,7 @@ footer .social-links {
   }
   footer .wrapper {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: 'A B';
+    grid-template-areas: "A B";
   }
 
   footer .col-a {

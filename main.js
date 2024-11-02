@@ -1,87 +1,76 @@
-window.addEventListener('scroll', onScroll)
+// Evento de rolagem que chama a função onScroll
+window.addEventListener("scroll", onScroll);
 
-onScroll()
+// Chama a função onScroll inicialmente
+onScroll();
+
+// Função principal para lidar com a rolagem
 function onScroll() {
-  showNavOnScroll()
-  showBackToTopButtonOnScroll()
-
-  activateMenuAtCurrentSection(home)
-  activateMenuAtCurrentSection(services)
-  activateMenuAtCurrentSection(testimonials)
-  activateMenuAtCurrentSection(about)
-  activateMenuAtCurrentSection(contact)
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
+  activateMenuAtCurrentSection(home);
+  activateMenuAtCurrentSection(services);
+  activateMenuAtCurrentSection(testimonials);
+  activateMenuAtCurrentSection(about);
+  activateMenuAtCurrentSection(contact);
 }
 
+// Função para ativar a seção atual no menu
 function activateMenuAtCurrentSection(section) {
-  // linha alvo
-  const targetLine = scrollY + innerHeight / 2
+  const targetLine = scrollY + innerHeight / 2;
 
-  // verificar se a sessão passou da linha
-  // quais dados vou precisar?
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+  const sectionEndsAt = sectionTop + sectionHeight;
 
-  //topo da seção
-  const sectionTop = section.offsetTop
+  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop;
+  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine;
 
-  //altura da seção
-  const sectionHeight = section.offsetHeight
-
-  //o topo da seção chegou ou ultrapassou a linha alvo
-  const sectionTopReachOrPassedTargetLine = targetLine >= sectionTop
-
-  
-
-  //verificar se a base está abaixo da linha alvo
-  //quais dados vou precisar?
-
-  //a seção termina onde??
-  const sectionEndsAt = sectionTop + sectionHeight
-
-  // o final da seção passou da linha alvo??
-  const sectionEndPassedTargetLine = sectionEndsAt <= targetLine
-
-  
-
-  //limites da seção
   const sectionBoundaries =
-    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine
+    sectionTopReachOrPassedTargetLine && !sectionEndPassedTargetLine;
 
-  const sectionId = section.getAttribute('id')
-  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`)
+  const sectionId = section.getAttribute("id");
+  const menuElement = document.querySelector(`.menu a[href*=${sectionId}]`);
 
-  menuElement.classList.remove('active')
+  menuElement.classList.remove("active");
   if (sectionBoundaries) {
-    menuElement.classList.add('active')
+    menuElement.classList.add("active");
   }
 }
 
+// Função para mostrar/esconder a navegação ao rolar a página
 function showNavOnScroll() {
+  const navigation = document.getElementById("navigation");
   if (scrollY > 0) {
-    navigation.classList.add('scroll')
+    navigation.classList.add("scroll");
   } else {
-    navigation.classList.remove('scroll')
+    navigation.classList.remove("scroll");
   }
 }
 
+// Função para mostrar/esconder o botão de "voltar ao topo" ao rolar a página
 function showBackToTopButtonOnScroll() {
   if (scrollY > 550) {
-    backToTopButton.classList.add('show')
+    backToTopButton.classList.add("show");
   } else {
-    backToTopButton.classList.remove('show')
+    backToTopButton.classList.remove("show");
   }
 }
 
+// Funções para abrir e fechar o menu
 function openMenu() {
-  document.body.classList.add('menu-expanded')
+  document.body.classList.add("menu-expanded");
 }
 
 function closeMenu() {
-  document.body.classList.remove('menu-expanded')
+  document.body.classList.remove("menu-expanded");
 }
 
+// Inicialização do ScrollReveal para animações de rolagem
 ScrollReveal({
-  origin: 'top',
-  distance: '30px',
-  duration: 700
+  origin: "top",
+  distance: "30px",
+  duration: 700,
 }).reveal(`
   #home, 
   #home img, 
@@ -95,21 +84,5 @@ ScrollReveal({
   #about, 
   #about header, 
   #about .content,
-  #contact`)
-
-  /* Testimonials carousel slider swiper 
-  const swiper = new Swiper('.swiper', {
-    slidesPerView: 1,
-    pagination:{
-      el: '.swiper-pagination'
-    },
-    mousewheel: true,
-    keyboard: true,
-    breakpoints: {
-      767:{
-        slidesPerView: 2,
-        setWrapperSize: true
-      }
-    }
-
-  });*/
+  #contact
+`);
