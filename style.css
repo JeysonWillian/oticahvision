@@ -615,7 +615,7 @@ footer .social-links {
 
   nav#navigation .menu ul li a {
     color: var(--primary-color);
-    opacity: 0.7;
+    /* opacity: 0.7; */
   }
 
   nav#navigation .menu a.button {
@@ -643,7 +643,7 @@ footer .social-links {
 
   nav#navigation.scroll .menu ul li a {
     color: var(--brand-light-2);
-    opacity: 0.6;
+    /* opacity: 0.6; */
   }
 
   nav#navigation.scroll .menu a.button {
@@ -668,8 +668,8 @@ footer .social-links {
     background-color: var(--primary-color);
 
     position: relative;
-    bottom: -2rem;
-    left: -0.5rem;
+    /* bottom: 0rem; */
+    left: -0.8rem;
 
     display: block;
 
